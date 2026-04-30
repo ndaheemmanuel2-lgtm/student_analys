@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Formulaire - EduBehavior</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+body{
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color:white;
+}
+
+.card{
+    background:#1e293b;
+    border:none;
+    border-radius:15px;
+}
+
+input, select{
+    background:#0f172a !important;
+    color:white !important;
+    border:none !important;
+}
+
+input::placeholder{
+    color:#94a3b8;
+}
+
+.btn-custom{
+    background:#3b82f6;
+    border:none;
+}
+
+.btn-custom:hover{
+    background:#2563eb;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container mt-5">
+
+<div class="text-center mb-4">
+    <h1 class="text-primary">🎓 EduBehavior Analytics</h1>
+    <p class="text-light">Saisir les informations d’un étudiant</p>
+</div>
+
+<div class="card p-4 shadow">
+
+<form method="POST" action="/form">
+
+<div class="row">
+
+<!-- Nom -->
+<div class="col-md-6 mb-3">
+<label>Nom</label>
+<input type="text" name="nom" class="form-control" placeholder="Ex: Emmanuel Ndahe" required>
+</div>
+
+<!-- Age -->
+<div class="col-md-6 mb-3">
+<label>Âge</label>
+<input type="number" name="age" class="form-control" placeholder="Ex: 20" required>
+</div>
+
+<!-- Note -->
+<div class="col-md-6 mb-3">
+<label>Note</label>
+<input type="number" step="0.1" name="note" class="form-control" placeholder="Ex: 14.5" required>
+</div>
+
+<!-- Sexe -->
+<div class="col-md-6 mb-3">
+<label>Sexe</label>
+<select name="sexe" class="form-control" required>
+<option value="">Choisir...</option>
+<option>Homme</option>
+<option>Femme</option>
+</select>
+</div>
+
+<!-- Niveau -->
+<div class="col-md-6 mb-3">
+<label>Niveau d'étude</label>
+<input type="text" name="niveau" class="form-control" placeholder="Ex: L1, L2, L3" required>
+</div>
+
+<!-- Classe -->
+<div class="col-md-6 mb-3">
+<label>Classe</label>
+<input type="text" name="classe" class="form-control" placeholder="Ex: Informatique" required>
+</div>
+
+<!-- Heures -->
+<div class="col-md-6 mb-3">
+<label>Heures d'étude / semaine</label>
+<input type="number" step="0.1" name="heures" class="form-control" placeholder="Ex: 6" required>
+</div>
+
+<!-- Mode de vie -->
+<div class="col-md-6 mb-3">
+<label>Temps sur Internet / jour</label>
+<input type="number" step="0.1" name="internet" class="form-control" placeholder="Ex: 5 heures" required>
+</div>
+
+<!-- Environnement -->
+<div class="col-md-12 mb-3">
+<label>Environnement scolaire</label>
+<select name="environnement" class="form-control">
+<option>Calme</option>
+<option>Moyen</option>
+<option>Bruyant</option>
+</select>
+</div>
+
+</div>
+
+<!-- Boutons -->
+<div class="text-center mt-3">
+
+<button type="submit" class="btn btn-custom px-5">
+    Enregistrer
+</button>
+
+<a href="/" class="btn btn-secondary px-4">
+    Retour
+</a>
+
+</div>
+
+</form>
+
+</div>
+
+</div>
+
+</body>
+</html>
