@@ -113,7 +113,7 @@ def analyse():
     }
 
     return render_template(
-        "analyse.html",
+        "analysis.html",
         stats=stats,
         hist="static/hist.png",
         bar="static/bar.png",
