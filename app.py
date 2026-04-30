@@ -7,6 +7,7 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 
 app = Flask(__name__)
+os.makedirs("static", exist_ok=True)
 
 data = []
 
@@ -125,6 +126,6 @@ def analyse():
 if __name__ == "__main__":
     app.run(
         host="0.0.0.0",
-        port=int(os.environ.get("PORT", 10000)),
+        port=int(os.environ.get("PORT", 5000)),
         debug=False
     )
